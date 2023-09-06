@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600;700;800;900;1000&display=swap" rel="stylesheet">
+    <style>
+        body{
+            margin: 0px;
+            font-family: 'Mulish', sans-serif;
+           /* font-family: 'Roboto', sans-serif;*/
+        }
+        .section-2{
+            width: 100%;
+            height: 70vh;
+            background-image: url("bg1.jpg");
+            background-size:cover;
+            background-position: center;
+            /*background-image: linear-gradient(to bottom right, red, white, black);*/
+            /*background-image: linear-gradient(to right, rgb(0, 0, 0), rgb(0, 0, 0), rgba(255,0,0,1));*/
+        }
+        /* Glassmorphism */
+        .glass{
+            width: 100%;
+            height: 70vh;
+            backdrop-filter: blur(2px) saturate(100%);
+            -webkit-backdrop-filter: blur(2px) saturate(100%);
+            background-color: rgba(17, 25, 40, 0.71);
+            border-radius: 0px;
+        }
+        .container{
+            display: flex;
+            flex-direction: row;
+            flex-wrap:nowrap;
+            gap: 40px;
+        }
+        .fig1{
+            width: 422px;
+            height: 337px;
+            padding: 63px 88px 34px 30px;
+            margin-left: 200px;
+            display: flex;
+            flex-direction: column;
+            color: whitesmoke;
+            border: 0px solid yellow;
+        }
+        .fig1-ques{
+            padding: 10px 15px;
+            border-radius: 50px;
+            width: 172px;
+            font-size: 26px;
+            background-color: rgb(250, 235, 215,0.3);
+        }
+        .fig1-tit{
+            margin-top: 40px;
+            font-size: xx-large;
+            font-weight: bolder;
+        }
+        .hover-underline-animation {
+            display: inline-block;
+            position: relative;
+            color: #f50808;
+        }
+        .hover-underline-animation:after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            transform: scaleX(0);
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #f10909;
+            transform-origin: bottom right;
+            transition: transform 0.25s ease-out;
+        }
+        .hover-underline-animation:hover:after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+        .fig1-sub-tit{
+            font-size: large;
+        }
+        .fig2{
+            width: 422px;
+            height: 323px;
+            padding: 35px 30px 76px 30px;
+            margin-left: 0px;
+            border: 0px solid green;
+        }
+        .hex-block1{
+            width: 335px;
+            height: 181px;
+            position: relative;
+            color: whitesmoke;
+            border: 0px solid green;
+        }
+        .hex-block2{
+            width: 335px;
+            height: 181px;
+            position: relative;
+            color: whitesmoke;
+            margin: -28px 0px 0px 89px;
+            border: 0px solid green;
+        }
+        .hex1-1{
+            position:absolute;
+            margin: 31px 36px;
+            font-size: 50px;
+            font-weight: bold;
+            border: 0px solid red;
+        }
+        .hex1-2{
+            position: absolute;
+            margin: 99px 36px;
+            border: 0px solid red;
+        }
+        .hex2{
+            margin: 10px 0px 10px 10px;
+            border: 0px solid red;
+        }
+        .hex2-1{
+            position: absolute;
+            margin: 31px 22px;
+            font-size: 50px;
+            font-weight: bold;
+            border: 0px solid blue;
+        }
+        .hex2-2{
+            position: absolute;
+            margin: 99px 8px;
+            border: 0px solid blue;
+        }
+        .hex3-1{
+            position:absolute;
+            margin: 31px 36px;
+            font-size: 50px;
+            font-weight: bold;
+            border: 0px solid red;
+        }
+        .hex3-2{
+            position: absolute;
+            margin: 108px 40px;
+            border: 0px solid red;
+        }
+        .hex4{
+            margin: 10px 0px 10px 10px;
+            border: 0px solid red;
+        }
+        .hex4-1{
+            position: absolute;
+            margin: 31px 35px;
+            font-size: 50px;
+            font-weight: bold;
+            border: 0px solid blue;
+        }
+        .hex4-2{
+            position: absolute;
+            margin: 105px 15px;
+            border: 0px solid blue;
+        }
+        @media only screen and (max-width: 992px) {
+            .container{
+                gap: 0px;
+            }
+            .section-2{
+                width: 590px;
+                height: 130vh;
+                background-image: url("bg1.jpg");
+                background-size:cover;
+                background-position: center;
+                /*background-image: linear-gradient(to bottom right, red, white, black);*/
+                /*background-image: linear-gradient(to right, rgb(0, 0, 0), rgb(0, 0, 0), rgba(255,0,0,1));*/
+            }
+            /* Glassmorphism */
+            .glass{
+                width: 590px;
+                height: 130vh;
+                backdrop-filter: blur(2px) saturate(100%);
+                -webkit-backdrop-filter: blur(2px) saturate(100%);
+                background-color: rgba(17, 25, 40, 0.71);
+                border-radius: 0px;
+            }
+            .fig1{
+                width: 422px;
+                height: 339px;
+                padding: 63px 88px 0px 30px;
+                margin-left: 10px;
+                display: flex;
+                flex-direction: column;
+                color: whitesmoke;
+                border: 0px solid red;
+            }
+            .fig2{
+                width: 422px;
+                height: 335px;
+                padding: 0px 30px 76px 30px;
+                margin-left: 30px;
+                border: 0px solid red;
+            }
+        }
+        @media only screen and (max-width: 600px) {
+            .container{
+                gap: 0px;
+            }
+            .section-2{
+                width: 590px;
+                height: 130vh;
+                background-image: url("bg1.jpg");
+                background-size:cover;
+                background-position: center;
+                /*background-image: linear-gradient(to bottom right, red, white, black);*/
+                /*background-image: linear-gradient(to right, rgb(0, 0, 0), rgb(0, 0, 0), rgba(255,0,0,1));*/
+            }
+            /* Glassmorphism */
+            .glass{
+                width: 590px;
+                height: 130vh;
+                backdrop-filter: blur(2px) saturate(100%);
+                -webkit-backdrop-filter: blur(2px) saturate(100%);
+                background-color: rgba(17, 25, 40, 0.71);
+                border-radius: 0px;
+            }
+            .fig1{
+                width: 422px;
+                height: 339px;
+                padding: 63px 88px 0px 30px;
+                margin-left: 10px;
+                display: flex;
+                flex-direction: column;
+                color: whitesmoke;
+                border: 0px solid red;
+            }
+            .fig2{
+                width: 422px;
+                height: 335px;
+                padding: 0px 30px 76px 30px;
+                margin-left: 30px;
+                border: 0px solid red;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="section-2">
+        <div class="glass">
+            <div class="container">
+                <div class="fig1">
+                    <span class="fig1-ques">Why Join Us??</span>
+                    <span class="fig1-tit"><span class="hover-underline-animation" style="color: red;">Great students</span> deserve the best jobs</span><br>
+                    <span class="fig1-sub-tit"><span class="hover-underline-animation" style="color: red; font-weight: bold;">JSTC</span> Makes it happen...&#128522;</span>
+                </div>
+                <div class="fig2">
+                    <div class="hex-block1">
+                        <span class="hex1">
+                            <span class="hex1-1">95+</span>
+                            <span class="hex1-2"><center>Success for<br>all clients</center></span>
+                            <svg width="160" height="181" viewBox="0 0 160 181" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path opacity="0.2" d="M72.9442 2.10811C77.3075 -0.411038 82.6833 -0.411038 87.0466 2.10811L152.94 40.1514C157.303 42.6706 159.991 47.3262 159.991 52.3645V128.451C159.991 133.489 157.303 138.145 152.94 140.664L87.0466 178.707C82.6833 181.227 77.3075 181.227 72.9442 178.707L7.0512 140.664C2.6879 138.145 0 133.489 0 128.451V52.3645C0 47.3262 2.6879 42.6706 7.0512 40.1514L72.9442 2.10811Z" fill="#F9F9FA"/>
+                            </svg>
+                        </span>
+                        <span class="hex2">
+                            <span class="hex2-1">500+</span>
+                            <span class="hex2-2"><center>Students Consulted<br>in totals</center></span>
+                            <svg width="160" height="181" viewBox="0 0 160 181" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path opacity="0.2" d="M72.9442 2.10811C77.3075 -0.411038 82.6833 -0.411038 87.0466 2.10811L152.94 40.1514C157.303 42.6706 159.991 47.3262 159.991 52.3645V128.451C159.991 133.489 157.303 138.145 152.94 140.664L87.0466 178.707C82.6833 181.227 77.3075 181.227 72.9442 178.707L7.0512 140.664C2.6879 138.145 0 133.489 0 128.451V52.3645C0 47.3262 2.6879 42.6706 7.0512 40.1514L72.9442 2.10811Z" fill="#F9F9FA"/>
+                            </svg>
+                        </span>
+                    </div>
+                    <div class="hex-block2">
+                        <span class="hex3">
+                            <span class="hex3-1">20+</span>
+                            <span class="hex3-2"><center>Certificate</center></span>
+                            <svg width="160" height="181" viewBox="0 0 160 181" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path opacity="0.2" d="M72.9442 2.10811C77.3075 -0.411038 82.6833 -0.411038 87.0466 2.10811L152.94 40.1514C157.303 42.6706 159.991 47.3262 159.991 52.3645V128.451C159.991 133.489 157.303 138.145 152.94 140.664L87.0466 178.707C82.6833 181.227 77.3075 181.227 72.9442 178.707L7.0512 140.664C2.6879 138.145 0 133.489 0 128.451V52.3645C0 47.3262 2.6879 42.6706 7.0512 40.1514L72.9442 2.10811Z" fill="#F9F9FA"/>
+                            </svg>
+                        </span>
+                        <span class="hex4">
+                            <span class="hex4-1">14+</span>
+                            <span class="hex4-2"><center>Years of coaching<br>experience</center></span>
+                            <svg width="160" height="181" viewBox="0 0 160 181" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path opacity="0.2" d="M72.9442 2.10811C77.3075 -0.411038 82.6833 -0.411038 87.0466 2.10811L152.94 40.1514C157.303 42.6706 159.991 47.3262 159.991 52.3645V128.451C159.991 133.489 157.303 138.145 152.94 140.664L87.0466 178.707C82.6833 181.227 77.3075 181.227 72.9442 178.707L7.0512 140.664C2.6879 138.145 0 133.489 0 128.451V52.3645C0 47.3262 2.6879 42.6706 7.0512 40.1514L72.9442 2.10811Z" fill="#F9F9FA"/>
+                            </svg>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>    
+    </section>
+</body>
+</html>
